@@ -225,7 +225,8 @@ const icons=[
 "13.JPG","14.JPG","15.JPG","16.JPG","17.JPG","18.JPG"
 ];
 
-icons.forEach((src,i)=>{
+const box=document.getElementById("icons");
+ icons.forEach((src,i)=>{
  const p = positions[i] || [50,50];
 
  const img=document.createElement("img");
