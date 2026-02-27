@@ -205,31 +205,31 @@ const letters=[
 
 /* POSISI LOVE */
 const positions=[
-[20,40],[15,50],[20,60],
-[30,30],[30,45],[30,55],[30,70],
-[40,25],[40,40],[40,60],[40,75],
-[50,30],[50,70],
-[60,35],[60,65],
-[70,40],[70,60],
-[80,45],[80,55],
+[20,45],[15,55],
+[25,35],[25,65],
+[35,30],[35,50],[35,70],
+[45,25],[45,75],
+[55,30],[55,70],
+[65,40],[65,60],
+[75,45],[75,55],
 [85,50],
-[55,50],
-[65,50]
+[50,50],
+[60,50]
 ];
 
 /* ICON FILES */
 const icons=[
-"1.JPS",
-"2.png","3.JPG","4.JPG","5.JPG","6.JPG",
+"1.JPG",
+"2.JPG","3.JPG","4.JPG","5.JPG","6.JPG",
 "7.JPG","8.JPG","9.JPG","10.JPG","11.JPG","12.JPG",
 "13.JPG","14.JPG","15.JPG","16.JPG","17.JPG","18.JPG"
 ];
 
-const box=document.getElementById("icons");
+icons.forEach((src,i)=>{
+ const p = positions[i] || [50,50];
 
-positions.forEach((p,i)=>{
  const img=document.createElement("img");
- img.src=icons[i] || icons[0];
+ img.src=src;
  img.className="icon";
  img.style.top=p[0]+"vh";
  img.style.left=p[1]+"vw";
